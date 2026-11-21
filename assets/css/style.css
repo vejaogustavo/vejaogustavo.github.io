@@ -252,3 +252,98 @@ details li{margin:.3rem 0}
 .lcard ul{margin:0;padding-left:1.2rem}
 .lcard li{margin:.35rem 0}
 .lcard li::marker{color:var(--orange-dark);font-weight:700}
+
+/* v12: Fotografia — grade com proporções originais e janela de foto */
+.foto-index{display:flex;flex-wrap:wrap;gap:.75rem;margin:1.6rem 0 0;padding:0;list-style:none}
+.foto-index .chip{background:var(--white)}
+.foto-col+.foto-col{margin-top:clamp(3.5rem,8vw,6rem);padding-top:clamp(3.5rem,8vw,6rem);border-top:3px solid var(--orange)}
+.foto-col h2{color:var(--white);margin-bottom:.4em}
+.foto-intro{max-width:46rem;font-size:clamp(1.1rem,2vw,1.3rem);font-weight:300;line-height:1.6;color:#E6E6E6}
+.fgrid{--g:.75rem;list-style:none;margin:2rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:var(--g)}
+/* duas fotos por linha (uma horizontal e uma vertical), larguras proporcionais para a altura ficar igual e a linha preencher toda a largura */
+.fgrid li{flex:var(--k) 1 calc((100% - var(--g)) * var(--k) - .5px);order:var(--o);margin:0;min-width:0}
+@media (max-width:700px){.fgrid{--g:.6rem}.fgrid li{flex:0 0 100%;order:0}}
+.page-head .foto-manifesto{margin:1.8rem 0 0;max-width:44rem;padding-left:1.1rem;border-left:4px solid var(--orange);font-size:clamp(1.08rem,2vw,1.3rem);line-height:1.7;font-weight:300}
+.ftile{position:relative;display:block;overflow:hidden;border-radius:8px;text-decoration:none;box-shadow:0 0 0 2px #3a3a3a;background:#1a1a1a}
+.ftile:hover{background:#1a1a1a;box-shadow:0 0 0 2px var(--orange)}
+.ftile img{display:block;width:100%;height:auto;aspect-ratio:var(--ar)}
+.ftile-t{position:absolute;left:0;right:0;bottom:0;padding:2rem .8rem .6rem;background:linear-gradient(transparent,rgba(0,0,0,.85));color:var(--white);font-family:var(--head);font-size:1.4rem;letter-spacing:.03em;text-transform:uppercase;line-height:1.05;opacity:0;transition:opacity .2s}
+.ftile:hover .ftile-t,.ftile:focus-visible .ftile-t{opacity:1}
+@media (hover:none){.ftile-t{display:none}}
+
+html.v-open{overflow:hidden}
+.viewer{border:0;padding:0;margin:0;width:100vw;max-width:none;height:100vh;height:100dvh;max-height:none;background:var(--black);color:var(--white);overflow:hidden}
+.viewer::backdrop{background:#000}
+.viewer-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(20rem,27rem);height:100%}
+.viewer-img{position:relative;display:flex;align-items:center;justify-content:center;padding:1.2rem;min-width:0;min-height:0}
+.viewer-img img{display:block;max-width:100%;max-height:calc(100vh - 2.4rem);max-height:calc(100dvh - 2.4rem);width:auto;height:auto;object-fit:contain;border-radius:6px}
+.viewer-side{overflow-y:auto;overscroll-behavior:contain;padding:1.6rem 1.6rem 1.4rem;border-left:4px solid var(--orange);background:#121212;display:flex;flex-direction:column}
+.v-btn{font:inherit;cursor:pointer;display:grid;place-items:center;width:3rem;height:3rem;padding:0;border-radius:50%;border:2px solid var(--white);background:rgba(11,11,11,.82);color:var(--white);font-size:1.9rem;line-height:1}
+.v-btn:hover{background:var(--orange);border-color:var(--orange);color:var(--black)}
+.v-btn span{display:block;transform:translateY(-.07em)}
+.v-close{position:absolute;top:.8rem;right:.8rem;z-index:5}
+.v-prev,.v-next{position:absolute;top:50%;transform:translateY(-50%);z-index:3}
+.v-prev{left:1.4rem}.v-next{right:1.4rem}
+.viewer :focus-visible{outline:3px solid var(--white);outline-offset:2px;box-shadow:0 0 0 6px var(--orange)}
+.v-count{margin:0 0 .9rem;padding-right:3.6rem;min-height:2.4rem;display:flex;align-items:center;font-weight:600;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:#D4D4D4}
+.viewer .eyebrow{background:var(--orange);color:var(--black)}
+.viewer h3{font-size:clamp(2rem,3vw,2.5rem);color:var(--white);margin:.2rem 0 .8rem}
+.viewer p{font-size:1.05rem;line-height:1.6;margin:0 0 1em}
+.viewer h4{font-family:var(--head);font-weight:400;text-transform:uppercase;font-size:1.3rem;letter-spacing:.06em;color:var(--orange);margin:1.3rem 0 .5rem;padding-top:1.1rem;border-top:1px solid #333}
+.viewer .l-desc p{font-size:.98rem;color:#E0E0E0}
+.viewer .fine{margin:auto 0 0;padding-top:1.4rem;font-size:.85rem;color:#B8B8B8}
+@media (max-width:900px){
+  .viewer-in{display:flex;flex-direction:column}
+  .viewer-img{flex:none;padding:.6rem .6rem .5rem}
+  .viewer-img img{max-height:44vh;max-height:44dvh}
+  .viewer-side{flex:1;min-height:0;border-left:0;border-top:4px solid var(--orange);padding:1.1rem 1.1rem 1.3rem}
+  .v-prev{left:.4rem}.v-next{right:.4rem}
+  .v-btn{width:2.7rem;height:2.7rem;font-size:1.7rem}
+  .v-close{top:.5rem;right:.5rem}
+}
+
+.viewer-side:focus-visible{outline:3px solid var(--orange);outline-offset:-3px}
+
+/* v13: Cartas ao meu primogênito */
+.cartas-head-in{display:grid;grid-template-columns:15rem minmax(0,1fr);gap:clamp(1.6rem,4.5vw,3.4rem);align-items:start}
+.quadro{margin:0}
+.quadro img{display:block;width:100%;height:auto;border:3px solid var(--black);border-radius:var(--radius);box-shadow:8px 9px 0 var(--orange)}
+.quadro figcaption{margin-top:1.3rem;font-size:.84rem;line-height:1.55;color:var(--gray-text)}
+.page-head .epigrafe{margin:1.7rem 0 0;max-width:44rem;padding-left:1.1rem;border-left:4px solid var(--orange)}
+.page-head .epigrafe p{font-size:clamp(1.08rem,2vw,1.28rem);line-height:1.65;font-style:italic;font-weight:300}
+@media (max-width:760px){.cartas-head-in{grid-template-columns:1fr}.quadro{width:min(62%,15rem)}}
+.cartas-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.5rem}
+@media (max-width:760px){.cartas-grid{grid-template-columns:1fr}}
+.cartas-grid>li{margin:0;display:flex}
+.carta{display:flex;flex-direction:column;width:100%}
+.carta .eyebrow{margin:0 0 .9rem;align-self:flex-start;color:var(--white)}
+.carta h3{font-size:clamp(1.9rem,3vw,2.3rem)}
+.card .carta-resumo{flex:1;margin:.3rem 0 1.3rem;line-height:1.6}
+.carta-det{margin:0;padding:0;border:0;border-radius:0;background:none}
+.carta-det summary{list-style:none;cursor:pointer;padding:.85rem 1.5rem;font-weight:600}
+.carta-det summary::-webkit-details-marker{display:none}
+.carta-det[open] summary{margin-bottom:1.4rem}
+.carta-det .carta-body{padding:0}
+.carta-body p{margin:0 0 1.1em;line-height:1.75}
+.carta-body .assina{margin-top:1.7rem;font-weight:600}
+.carta-lista{margin:0 0 1.1em;padding-left:1.3rem}
+.carta-lista li{margin:.4rem 0;line-height:1.65}
+.carta-lista li::marker{color:var(--orange-dark);font-weight:700}
+.carta-det .carta-body p{color:var(--black);font-size:1.05rem}
+.reader{border:0;border-top:6px solid var(--orange);padding:0;margin:auto;width:min(calc(100vw - 2rem),48rem);max-width:none;height:min(calc(100vh - 2rem),58rem);height:min(calc(100dvh - 2rem),58rem);max-height:none;background:var(--white);color:var(--black);overflow:hidden;border-radius:4px;box-shadow:0 18px 60px rgba(0,0,0,.5)}
+.reader[open]{display:flex;flex-direction:column}
+.reader::backdrop{background:rgba(0,0,0,.8)}
+.reader-top{flex:none;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem .9rem .7rem clamp(1.1rem,4vw,2.6rem);border-bottom:1px solid #D9D9D9}
+.reader .v-count{margin:0;padding:0;min-height:0;color:var(--gray-text)}
+.reader .v-btn{width:2.6rem;height:2.6rem;font-size:1.7rem;border-color:var(--black);background:var(--white);color:var(--black)}
+.reader .v-btn:hover{background:var(--orange);border-color:var(--black);color:var(--black)}
+.reader .v-close{position:static}
+.reader-scroll{flex:1;min-height:0;overflow-y:auto;overscroll-behavior:contain;padding:1.6rem clamp(1.1rem,4vw,2.6rem) 2.2rem}
+.reader-scroll .eyebrow{margin-bottom:.9rem}
+.reader-scroll h2{font-size:clamp(2.3rem,5.5vw,3.3rem);margin:0 0 1.2rem}
+.reader .carta-body p{font-size:1.12rem;color:var(--black)}
+.reader-nav{flex:none;display:flex;justify-content:space-between;gap:.75rem;padding:.8rem clamp(1.1rem,4vw,2.6rem);border-top:1px solid #D9D9D9;background:var(--gray-bg)}
+.reader-nav .btn{padding:.65rem 1.2rem}
+.reader :focus-visible{outline:3px solid var(--black);outline-offset:2px;box-shadow:0 0 0 6px var(--orange)}
+.reader-scroll:focus-visible{outline-offset:-3px;box-shadow:none}
+@media (max-width:640px){.reader{width:100vw;height:100vh;height:100dvh;margin:0;border-radius:0}.reader-nav .btn{padding:.6rem .9rem;font-size:.95rem}}
