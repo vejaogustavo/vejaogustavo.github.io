@@ -347,3 +347,10 @@ html.v-open{overflow:hidden}
 .reader :focus-visible{outline:3px solid var(--black);outline-offset:2px;box-shadow:0 0 0 6px var(--orange)}
 .reader-scroll:focus-visible{outline-offset:-3px;box-shadow:none}
 @media (max-width:640px){.reader{width:100vw;height:100vh;height:100dvh;margin:0;border-radius:0}.reader-nav .btn{padding:.6rem .9rem;font-size:.95rem}}
+
+/* v13: cartões da home que levam às páginas pessoais */
+.card--link a{color:inherit;text-decoration:none}
+.card--link a::after{content:"";position:absolute;inset:0}
+.card--link:hover{box-shadow:6px 7px 0 var(--orange)}
+.card--link:focus-within{outline:3px solid var(--black);outline-offset:3px}
+.card--link a:focus-visible{outline:0;box-shadow:none}
