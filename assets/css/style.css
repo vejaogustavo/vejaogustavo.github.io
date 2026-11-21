@@ -354,3 +354,14 @@ html.v-open{overflow:hidden}
 .card--link:hover{box-shadow:6px 7px 0 var(--orange)}
 .card--link:focus-within{outline:3px solid var(--black);outline-offset:3px}
 .card--link a:focus-visible{outline:0;box-shadow:none}
+
+/* v14: fotos em fileira (palestras e câmera) */
+.shots{list-style:none;margin:2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.shots li{margin:0}
+.shots img{display:block;width:100%;height:auto;border:3px solid var(--black);border-radius:var(--radius)}
+.shots li:not(.wide) img{aspect-ratio:3/2;object-fit:cover}
+.shots .wide{grid-column:1/-1}
+@media (max-width:600px){.shots{grid-template-columns:1fr}}
+.excerpt p{margin:0 0 1.05rem}
+.shots--3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.shots--3{grid-template-columns:1fr}}
