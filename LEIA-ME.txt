@@ -1,0 +1,15 @@
+Atualização do site: trailer do canal na página inicial (23/11/2026, v16)
+
+Só 4 arquivos mudaram ou são novos. Suba no repositório vejaogustavo.github.io mantendo as pastas:
+
+  index.html                          (substitui o atual)
+  assets/css/style.css                (substitui o atual)
+  assets/video/trailer-canal.mp4      (NOVO: crie a pasta "video" dentro de "assets")
+  assets/img/trailer-canal-capa.jpg   (NOVO)
+
+Nada mais muda. Depois de publicar (leva 1 a 2 minutos), abra https://vejaogustavo.github.io
+no computador e no celular, desça até "Conteúdo em vídeo" e toque no play.
+
+Obs.: o vídeo do site é o mesmo que foi para o canal (com a trilha sonora), 1280x720, 4,4 MB.
+Ele só carrega quando alguém aperta o play. Se você trocar o vídeo do YouTube por outra versão,
+me envie que eu troco o arquivo do site pela mesma.

@@ -365,3 +365,14 @@ html.v-open{overflow:hidden}
 .excerpt p{margin:0 0 1.05rem}
 .shots--3{grid-template-columns:repeat(3,minmax(0,1fr))}
 @media (max-width:760px){.shots--3{grid-template-columns:1fr}}
+
+/* trailer do canal (home) */
+.vid{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(1.5rem,5vw,4rem);align-items:center}
+.vid .section-head{margin-bottom:0}
+@media (max-width:860px){.vid{grid-template-columns:1fr}}
+.vid-media figure{margin:0}
+.vid-media video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#000;border:2px solid var(--orange);border-radius:var(--radius)}
+.vid-media figcaption{font-size:.95rem;color:#D4D4D4;margin-top:.6rem}
+.band--dark details.vid-text{background:transparent;color:var(--white);border-color:rgba(255,255,255,.55);margin-top:1rem}
+.vid-text summary{font-size:1rem}
+.vid-text ol{font-size:1rem;line-height:1.5}
