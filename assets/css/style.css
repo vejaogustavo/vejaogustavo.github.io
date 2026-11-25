@@ -42,14 +42,14 @@ a:hover{background:var(--orange);text-decoration-color:var(--black)}
 .brand img{height:3.7rem;width:auto;display:block}
 .nav-toggle{display:none;font:inherit;font-weight:600;background:var(--black);color:var(--white);border:0;border-radius:999px;padding:.55rem 1.1rem;cursor:pointer}
 .main-nav ul{display:flex;gap:.3rem;margin:0;padding:0;list-style:none;align-items:center}
-.main-nav a{display:block;text-decoration:none;font-weight:500;padding:.5rem .9rem;border-radius:999px}
+.main-nav a{display:block;text-decoration:none;font-weight:500;padding:.5rem .9rem;border-radius:999px;white-space:nowrap}
 .main-nav a:hover{background:var(--gray-bg)}
 .main-nav a[aria-current="page"]{background:var(--orange);color:var(--black);font-weight:600}
 .main-nav .nav-yt a{background:var(--black);color:var(--white);display:inline-flex;gap:.45rem;align-items:center;margin-left:.4rem}
 .main-nav .nav-yt a:hover{background:var(--orange);color:var(--black)}
 .main-nav .nav-yt svg{width:1.1em;height:1.1em;fill:currentColor}
 @media (max-width:480px){.brand img{height:3rem}}
-@media (max-width:860px){
+@media (max-width:1000px){
   .js .nav-toggle{display:inline-block}
   .js .main-nav{display:none;position:absolute;left:0;right:0;top:100%;background:var(--white);border-bottom:3px solid var(--black);padding:.8rem 1.25rem 1.2rem}
   .js .main-nav.is-open{display:block}
@@ -376,3 +376,78 @@ html.v-open{overflow:hidden}
 .band--dark details.vid-text{background:transparent;color:var(--white);border-color:rgba(255,255,255,.55);margin-top:1rem}
 .vid-text summary{font-size:1rem}
 .vid-text ol{font-size:1rem;line-height:1.5}
+
+/* Projeto Kauê — paleta restrita: Urucum #C4462D, Palha #F1EAD8, Jenipapo #16202A (sem verde) */
+:root{--jen:#16202A;--pal:#F1EAD8;--uru:#C4462D}
+.k{padding:clamp(3.5rem,8vw,6rem) 0}
+.k-dark{background:var(--jen);color:var(--pal)}
+.k-light{background:var(--pal);color:var(--jen)}
+.k-line{border-top:3px solid var(--jen)}
+.k-uru{background:var(--uru);color:var(--pal)}
+.k a{text-decoration-color:var(--uru)}
+.k-dark a:hover,.k-uru a:hover{background:var(--pal);color:var(--jen)}
+.k-light a:hover{background:var(--jen);color:var(--pal)}
+.k :focus-visible{outline:3px solid var(--jen);outline-offset:3px;box-shadow:0 0 0 6px var(--uru)}
+.k-dark :focus-visible,.k-uru :focus-visible{outline-color:var(--pal);box-shadow:0 0 0 6px var(--uru)}
+.k .eyebrow{background:var(--jen);color:var(--pal)}
+.k-dark .eyebrow{background:var(--pal);color:var(--jen)}
+.k .muted{color:inherit}
+.k mark{background:var(--uru);color:var(--pal);padding:0 .12em;margin:0 -.04em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.k h2 em{font-style:normal;color:var(--uru)}
+/* botões (texto grande e em negrito, para manter o contraste mínimo de 3:1 também sobre o urucum) */
+.k .btn{font-size:1.2rem;font-weight:700;background:var(--jen);color:var(--pal);border-color:var(--jen)}
+.k .btn:hover{background:var(--uru);color:var(--pal);border-color:var(--uru)}
+.k .btn--ghost{background:transparent;color:var(--jen)}
+.k .btn--ghost:hover{background:var(--jen);color:var(--pal);border-color:var(--jen)}
+.k-dark .btn,.k-uru .btn{background:var(--pal);color:var(--jen);border-color:var(--pal)}
+.k-dark .btn:hover{background:var(--uru);color:var(--pal);border-color:var(--uru)}
+.k-uru .btn:hover{background:var(--jen);color:var(--pal);border-color:var(--jen)}
+.k-dark .btn--ghost,.k-uru .btn--ghost{background:transparent;color:var(--pal);border-color:var(--pal)}
+.k-dark .btn--ghost:hover,.k-uru .btn--ghost:hover{background:var(--pal);color:var(--jen);border-color:var(--pal)}
+.k .btn svg{width:1.15em;height:1.15em;fill:currentColor}
+/* herói */
+.k-hero{overflow:hidden}
+.k-hero .wrap{display:grid;grid-template-columns:1.25fr .75fr;gap:clamp(1.5rem,5vw,4rem);align-items:center}
+.k-hero h1{margin-bottom:.35em}
+.k-hero .ln{display:block}
+.k-art{margin:0;justify-self:center;width:min(100%,24rem);border:3px solid var(--jen);border-radius:var(--radius);box-shadow:10px 12px 0 var(--uru);overflow:hidden}
+.k-dark .k-art{border-color:var(--pal)}
+.k-art img{display:block;width:100%;height:auto}
+@media (max-width:860px){.k-hero .wrap{grid-template-columns:1fr}.k-art{order:-1;width:min(70%,16rem);justify-self:start;margin:0 0 1.6rem}}
+/* cartões */
+.k .card{background:transparent;border-color:var(--jen);color:inherit}
+.k .card::before{background:var(--uru);border-bottom-color:var(--jen)}
+.k .card p{color:inherit}
+.k .card .num{color:var(--uru)}
+.k-dark .card{border-color:var(--pal)}
+.k-dark .card::before{border-bottom-color:var(--pal)}
+/* citação */
+.k-quote{margin:1.8rem 0 0;border-left:8px solid var(--uru);padding:.4rem 0 .4rem 1.4rem;font-size:1.3rem;font-weight:500;line-height:1.5}
+.k-quote p{margin:0}
+/* passos */
+.k-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin:0;padding:0;list-style:none}
+@media (max-width:860px){.k-steps{grid-template-columns:1fr}}
+.k-steps li{border-top:4px solid var(--uru);padding-top:1rem}
+.k-steps .n{font-family:var(--head);font-size:4.2rem;line-height:.9;color:var(--uru);display:block}
+.k-steps h3{margin:.3rem 0 .4rem}
+.k-steps p{margin:0}
+/* caixas */
+.k-box{position:relative;overflow:hidden;border:2px solid var(--jen);border-radius:var(--radius);padding:1.9rem 1.5rem 1.4rem}
+.k-box::before{content:"";position:absolute;left:0;right:0;top:0;height:9px;background:var(--uru);border-bottom:2px solid var(--jen)}
+.k-dark .k-box{border-color:var(--pal)}.k-dark .k-box::before{border-bottom-color:var(--pal)}
+.k-box h3{margin-bottom:.5rem}
+.k-box ul{margin:0;padding-left:1.2rem}
+.k-box li{margin:.4rem 0}
+.k-box li::marker{color:var(--uru);font-weight:700}
+.k-box p:last-child{margin-bottom:0}
+/* CTA */
+.k-cta{text-align:center}
+.k-cta .k-logo{display:block;margin:0 auto 1.6rem;width:min(100%,25rem);height:auto}
+.k-cta h2{margin-bottom:.3em}
+.k-cta .actions{justify-content:center}
+/* destaque na página inicial */
+.k-home .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(1.5rem,5vw,4rem);align-items:center}
+.k-home h2{margin-bottom:.35em}
+.k-home .k-logo{display:block;width:min(100%,27rem);height:auto;justify-self:center;border-radius:var(--radius)}
+@media (max-width:860px){.k-home .wrap{grid-template-columns:1fr}.k-home .k-logo{order:-1;width:min(80%,19rem);justify-self:start}}
+.k-home--line{border-block:3px solid var(--jen)}

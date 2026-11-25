@@ -1,15 +1,25 @@
-Atualização do site: trailer do canal na página inicial (23/11/2026, v16)
+Atualização do site: página Projeto Kauê, no menu, no rodapé e em destaque na página inicial (25/11/2026, v17)
 
-Só 4 arquivos mudaram ou são novos. Suba no repositório vejaogustavo.github.io mantendo as pastas:
+Esta atualização mexe em 18 arquivos. Suba no repositório vejaogustavo.github.io mantendo as pastas:
 
-  index.html                          (substitui o atual)
-  assets/css/style.css                (substitui o atual)
-  assets/video/trailer-canal.mp4      (NOVO: crie a pasta "video" dentro de "assets")
-  assets/img/trailer-canal-capa.jpg   (NOVO)
+NOVOS
+  projeto-kaue.html                      (a página do Projeto Kauê)
+  assets/img/kaue-simbolo.png
+  assets/img/kaue-logo-jenipapo.png
+  assets/img/kaue-logo-urucum.png
 
-Nada mais muda. Depois de publicar (leva 1 a 2 minutos), abra https://vejaogustavo.github.io
-no computador e no celular, desça até "Conteúdo em vídeo" e toque no play.
+SUBSTITUEM os atuais (o item "Projeto Kauê" entrou no menu e no rodapé de todas as páginas)
+  index.html                             (também ganhou o destaque do Kauê, depois de "Materiais gratuitos")
+  sobre.html, materiais.html, contato.html, fotografia.html, minha-historia.html, cartas.html,
+  trecho-do-livro.html, privacidade.html, cookies.html, termos-materiais.html, 404.html
+  assets/css/style.css                   (cores e blocos do Kauê; o menu do celular passou a valer até 1000 px de largura)
+  sitemap.xml                            (agora com 12 endereços)
 
-Obs.: o vídeo do site é o mesmo que foi para o canal (com a trilha sonora), 1280x720, 4,4 MB.
-Ele só carrega quando alguém aperta o play. Se você trocar o vídeo do YouTube por outra versão,
-me envie que eu troco o arquivo do site pela mesma.
+Depois de publicar (leva 1 a 2 minutos), confira no computador e no celular:
+  1. O menu mostra "Projeto Kauê" entre "Livro e materiais" e "Contato".
+  2. A página inicial mostra a faixa escura do Kauê depois dos e-books gratuitos.
+  3. Na página do Kauê, os botões abrem o site do Kauê, o Instagram @kaueavalia e o e-mail kaueavalia@gmail.com.
+  4. https://vejaogustavo.github.io/sitemap.xml abre e lista 12 endereços. Depois reenvie o sitemap no Search Console.
+
+Obs.: a frase do seu Sobre do Kauê (o filho e o "filho do próximo") ainda não está na página.
+Me envie o texto exato que eu incluo e gero uma nova versão só com esse arquivo.
